@@ -1,0 +1,48 @@
+<br>
+
+<div class="card-panel contenedor rig z-depth-1">
+  <div class="container row">
+  <form ng-submit="FiltrarUsuarioFecha()">
+    <div class="col s5">
+      <label>Fecha inicio</label>
+      <input type="date" ng-model="Fecha.inicio" required>
+    </div>
+    <div class="col s5">
+      <label>Fecha fin</label>
+      <input type="date" ng-model="Fecha.fin" required>
+    </div>
+    <div class="col s2">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Buscar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+
+  </form>
+</div>
+
+<div class="container">
+  <table class="highlight centered">
+          <thead>
+            <tr>
+              <th data-field="Nombre">Nombre</th>
+              <th data-field="Apellido">Apellido</th>
+              <th data-field="Cedula">Cedula</th>
+              <th data-field="Correo">Correo</th>
+              <th data-field="Entrada">Entrada</th>
+              <th data-field="Fecha">Fecha</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr ng-repeat="Usuario in Usuarios">
+              <td>{{Usuario.nombre}}</td>
+              <td>{{Usuario.apellido}}</td>
+              <td>{{Usuario.cedula}}</td>
+              <td>{{Usuario.email}}</td>
+              <td>{{Usuario.estado}}</td>
+              <td>{{Usuario.fecha}}</td>
+            </tr>
+          </tbody>
+        </table>
+</div>
+</div>

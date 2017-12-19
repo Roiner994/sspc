@@ -1,0 +1,32 @@
+<div class="card-panel contenedor z-depth-3">
+<h4 class="center-align">{{title}}</h4>
+	<form ng-submit="actualizarUsuario()">
+		<div class="input-field">
+			<label>Nombre</label><br><br>
+			<input placeholder="Nombre" type="text" ng-model="Usuario.nombre">
+		</div>
+		<div class="input-field">
+			<label>Apellido</label><br><br>
+			<input placeholder="Apellido" type="text" ng-model="Usuario.apellido">
+		</div>
+		<div class="input-field">
+			<label>Cedula</label><br><br>
+			<input placeholder="V12345678" type="text" ng-model="Usuario.cedula">
+		</div>
+		<div class="input-field">
+			<label>Correo</label><br><br>
+			<input placeholder="ejemplo@gmail.com" type="email" ng-model="Usuario.email">
+		</div>
+		
+		<select ng-model="Usuario.tipo" class="browser-default" required>
+			<option value="" disabled selected>Seleccione el nivel de usuario</option>
+			<option value="administrador">administrador</option>
+			<option value="obrero">obrero</option>
+			<option value="estudiante">estudiante</option>
+		</select>
+
+		<button class="btn waves-effect blue darken-3" type="submit">
+				{{button}}
+		</button>
+	</form>
+</div>

@@ -1,0 +1,52 @@
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 class="center-align">{{title}}</h4>
+        <div class="input-field">
+            <h5>Nombre: {{Usuario.nombre}}</h5><br><br>
+        </div>
+        <div class="input-field">
+            <h5>Apellido: {{Usuario.apellido}}</h5><br><br>
+        </div>
+        <div class="input-field">
+            <h5>Cedula:{{Usuario.cedula}} </h5><br><br>
+        </div>
+        <div class="input-field">
+            <h5>Correo: {{Usuario.email}}</h5><br><br>
+        </div>
+        <div class="input-field">
+            <h5>tipo de usuario: {{Usuario.tipo}}</h5><br><br>
+        </div>  
+    </form>
+  </div>
+</div>
+
+
+<div class="card-panel contenedor z-depth-1">
+  <a href="#/usuarios/nuevo" class="btn">Nuevo usuario <i class="fa fa-user-plus fa-2x"></i></a>
+	<table class="highlight">
+    <thead>
+      <tr>
+        <th data-field="Nombre">Nombre</th>
+        <th data-field="Apellido">Apellido</th>
+        <th data-field="Cedula">Cedula</th>
+        <th data-field="Correo">Correo</th>
+        <th data-field="Cedula">Accion</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="Usuario in Usuarios">
+        <td>{{Usuario.nombre}}</td>
+        <td>{{Usuario.apellido}}</td>
+        <td>{{Usuario.cedula}}</td>
+        <td>{{Usuario.email}}</td>
+        <td>
+          <button data-target="modal1" class="btn btn-floating blue" data-delay="50" ng-click="verUsuario(Usuario.id)"><i class="fa fa-user fa-2x"></i></button>
+          <a href="#/usuarios/editar/{{Usuario.id}}" class="btn-floating orange"><i class="fa fa-edit fa-2x"></i></a>
+          <a class="btn-floating red" ng-click="eliminarUsuario(Usuario.id)"><i class="fa fa-user-times fa-2x"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

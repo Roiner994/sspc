@@ -1,0 +1,37 @@
+<div class="row">
+  <div id="login-page" class="row contenedor input-field col s12 center">
+    <div class="col s3"></div>
+    <div class="col s5 z-depth-4 card-panel">
+      <form class="login-form" ng-submit="loguear()">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <img src="assets/img/logo_login.png" width="250" alt="" class="responsive-img valign profile-image-login">
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="username" type="text" ng-model="Usuario.email">
+            <label for="email">Correo</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password" type="password" ng-model="Usuario.password">
+            <label for="password">Contraseña</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="input-field col s12">
+            <button type="submit" class="btn waves-effect waves-light col s12 blue">
+              Login
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

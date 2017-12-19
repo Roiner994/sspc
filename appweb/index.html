@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/materialize.min.css">
+	<link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body ng-app="Client" class="fondo">
+
+<!-- <div id="login-page" class="row contenedor">
+    <div class="col s5 z-depth-4 card-panel">
+      <form class="login-form">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <img src="assets/img/logo2.png" width="150" alt="" class="circle responsive-img valign profile-image-login">
+            <p class="center login-form-text">Material Design Admin Template</p>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="username" type="text">
+            <label for="email">Correo</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password" type="password">
+            <label for="password">Contraseña</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="input-field col s12">
+            <a href="index.html" class="btn waves-effect waves-light col s12">Login</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 m6 l6">
+            <p class="margin medium-small"><a href="page-register.html">Registrar!</a></p>
+          </div>    
+        </div>
+
+      </form>
+    </div>
+  </div> -->
+
+
+<div ng-view></div>
+	<script src="components/angular.min.js"></script>
+	<script src="components/angular-resource.min.js"></script>
+	<script src="components/angular-route.min.js"></script>
+
+	<script src="scripts/router.js"></script>
+	<script src="scripts/controllers/note.js"></script>
+	<script src="scripts/services/NoteService.js"></script>
+
+	<script src="scripts/services/UsuarioService.js"></script>
+	<script src="scripts/controllers/usuario.js"></script>
+  <script src="scripts/controllers/auth.js"></script>
+
+	<script src="assets/js/jquery-2.1.0.min.js"></script>
+	<script src="assets/js/materialize.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.:UViewSS:.</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/micss.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	
+</head>
+<body ng-app="Client" class="grey lighten-2" ng-controller="BodyController">
+
+	<!-- componets -->
+	<script src="components/angular.min.js"></script>
+	<script src="components/angular-resource.min.js"></script>
+	<script src="components/angular-route.min.js"></script>
+	<script src="components/angular-cookies.min.js"></script>
+
+
+	<!-- Dropdown Structure -->
+	<ul id="dropdown1" class="dropdown-content">
+	  <li><a href="#/fecha_usuario">Usuarios</a></li>
+	  <li><a href="#/fecha_carro">Vehiculos</a></li>
+	</ul>
+	
+	<nav class="blue darken-4" ng-controller="LoginCtrl" ng-hide="Menu.estado == 0 ">
+	  <div class="nav-wrapper">
+	  	<a href="#" class="brand-logo"><img id="imagen" src="assets/img/logocorto.png" width="60" alt="" class="responsive-img valign profile-image-login"></a>
+	    <ul class="right hide-on-med-and-down">
+	      <li><a href="#/home">Home</a></li>
+	      <li><a href="#/usuarios">Usuarios</a></li>
+	      <li><a href="#/carros">Vehiculos</a></li>
+	      <!-- Dropdown Trigger -->
+	       <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Filtrado <i class="fa fa-sort-desc"></i></a></li>
+	      <li><a ng-click="cerrarSesion()" href="">Salir</a></li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div ng-view></div>
+
+
+	<!-- rutas -->
+	<script src="scripts/router.js"></script>
+	<script src="scripts/controllers/auth.js"></script>
+
+	<script src="scripts/controllers/note.js"></script>
+	<script src="scripts/services/NoteService.js"></script>
+
+	<script src="scripts/services/UsuarioService.js"></script>
+	<script src="scripts/controllers/usuario.js"></script>
+
+	<script src="scripts/services/CarroService.js"></script>
+	<script src="scripts/controllers/carro.js"></script>
+	
+	<script src="scripts/controllers/app.js"></script>
+
+	<script src="scripts/controllers/fecha.js"></script>
+
+	<script src="scripts/services/MenuService.js"></script>
+	<script src="scripts/services/AuthService.js"></script>
+	
+	<!-- front -->
+	<script src="assets/js/jquery-3.2.0.min.js"></script>
+	<script src="assets/js/materialize.js"></script>
+	<script src="assets/js/menu.js"></script>
+	
+</body>
+</html>

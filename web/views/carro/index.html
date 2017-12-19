@@ -1,0 +1,49 @@
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 class="center-align">{{title}}</h4>
+        <div class="input-field">
+            <h5>Nombre: {{Usuario.nombre}}</h5><br><br>
+        </div>
+        <div class="input-field">
+            <h5>Apellido: {{Usuario.apellido}}</h5><br><br>
+        </div>
+        <div class="input-field">
+            <h5>Cedula:{{Usuario.cedula}} </h5><br><br>
+        </div>
+        <div class="input-field">
+            <h5>Correo: {{Usuario.email}}</h5><br><br>
+        </div>
+        <div class="input-field">
+            <h5>tipo de usuario: {{Usuario.tipo}}</h5><br><br>
+        </div>  
+    </form>
+  </div>
+</div>
+
+
+<div class="card-panel contenedor z-depth-1">
+  <a href="#/carros/nuevo" class="btn">Nuevo Carro <i class="fa fa-car fa-2x"></i></a>
+	<table class="highlight">
+    <thead>
+      <tr>
+        <th data-field="Placa">Placa</th>
+        <th data-field="Marca">Marca</th>
+        <th data-field="Modelo">Modelo</th>
+        <th data-field="Cedula">Accion</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="Carro in Carros">
+        <td>{{Carro.placa}}</td>
+        <td>{{Carro.marca}}</td>
+        <td>{{Carro.modelo}}</td>
+        <td>
+          <a href="#/carros/editar/{{Carro.placa}}" class="btn-floating orange"><i class="fa fa-edit fa-2x"></i></a>
+          <a class="btn-floating red" ng-click="eliminarCarro(Carro.id)"><i class="fa fa-trash fa-2x"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

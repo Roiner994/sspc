@@ -1,0 +1,25 @@
+<div class="card-panel container z-depth-3">
+<h4 class="center-align">{{title}}</h4>
+	<form ng-submit="guardarCarro()">
+		<div class="input-field">
+			<label>Cedula</label><br><br>
+			<input placeholder="V12345678" type="text" ng-model="Carro.cedula">
+		</div>
+		<div class="input-field">
+			<label>Placa</label><br><br>
+			<input placeholder="Placa" type="text" ng-model="Carro.placa">
+		</div>
+		<div class="input-field">
+			<label>Marca</label><br><br>
+			<input placeholder="Marca" type="text" ng-model="Carro.marca">
+		</div>
+		<div class="input-field">
+			<label>Modelo</label><br><br>
+			<input placeholder="Modelo" type="text" ng-model="Carro.modelo">
+		</div>
+
+		<button class="btn waves-effect blue darken-3" type="submit">
+				{{button}}
+		</button>
+	</form>
+</div>
